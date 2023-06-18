@@ -1,5 +1,5 @@
 # FUT
-DOMAINX,utas.mob.v1.fut.ea.com
-DOMAINX,utas.external.s3.fut.ea.com
-DOMAINX,utas.external.s2.fut.ea.com
-DOMAINX,utas.external.s1.fut.ea.com
+DOMAIN,utas.mob.v1.fut.ea.com
+DOMAIN,utas.external.s3.fut.ea.com
+DOMAIN,utas.external.s2.fut.ea.com
+DOMAIN,utas.external.s1.fut.ea.com
