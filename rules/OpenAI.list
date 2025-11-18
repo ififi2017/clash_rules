@@ -16,3 +16,4 @@ DOMAIN-SUFFIX,intercomcdn.com
 DOMAIN-SUFFIX,openaiapi-site.azureedge.net
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,stripe.com
+DOMAIN,apple-relay.apple.com
