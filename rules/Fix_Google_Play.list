@@ -1,7 +1,12 @@
-# Fix_Google_Play
-# Route these through proxy so services.googleapis.cn returns a global CDN URL,
-# and xn--ngstr-lra8j.com (Google global CDN) is reached consistently via proxy.
-# See: https://github.com/nicehash/NiceHashQuickMiner/issues/xxx (Google Play "waiting" fix)
+# Fix_Google_Play — Method 4: both domains via DIRECT
+#
+# services.googleapis.cn via DIRECT → Google returns CN CDN URL
+# xn--ngstr-lra8j.com   via DIRECT → CN CDN is directly accessible
+#
+# Both must take the same path (both DIRECT or both proxy).
+# Explicit DIRECT here ensures these rules fire before geolocation-!cn
+# would otherwise send xn--ngstr-lra8j.com through proxy.
+DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 DOMAIN-SUFFIX,googleapis.cn
 DOMAIN,clientservices.googleapis.com
 DOMAIN,update.googleapis.com
