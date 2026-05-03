@@ -1,12 +1,9 @@
-# Fix_Google_Play — Method 4: both domains via DIRECT
+# Fix_Google_Play — Method 3: route via proxy
 #
-# services.googleapis.cn via DIRECT → Google returns CN CDN URL
-# xn--ngstr-lra8j.com   via DIRECT → CN CDN is directly accessible
-#
-# Both must take the same path (both DIRECT or both proxy).
-# Explicit DIRECT here ensures these rules fire before geolocation-!cn
-# would otherwise send xn--ngstr-lra8j.com through proxy.
-DOMAIN-SUFFIX,xn--ngstr-lra8j.com
+# googleapis.cn (incl. services.googleapis.cn) must go through proxy
+# so Google returns a global CDN URL, not CN CDN.
+# xn--ngstr-lra8j.com is .com → caught by geolocation-!cn → proxy automatically.
+# Both end up on the same proxy path → consistent.
 DOMAIN-SUFFIX,googleapis.cn
 DOMAIN,clientservices.googleapis.com
 DOMAIN,update.googleapis.com
