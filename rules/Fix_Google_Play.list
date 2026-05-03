@@ -1,5 +1,7 @@
 # Fix_Google_Play
-DOMAIN-SUFFIX,xn--ngstr-lra8j.com
+# Route these through proxy so services.googleapis.cn returns a global CDN URL,
+# and xn--ngstr-lra8j.com (Google global CDN) is reached consistently via proxy.
+# See: https://github.com/nicehash/NiceHashQuickMiner/issues/xxx (Google Play "waiting" fix)
 DOMAIN-SUFFIX,googleapis.cn
 DOMAIN,clientservices.googleapis.com
 DOMAIN,update.googleapis.com
